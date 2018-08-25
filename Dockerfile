@@ -14,4 +14,4 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=sdk /home/ssmotor/dist/ /usr/share/nginx/html
+COPY --from=sdk /home/ssmotor/dist/ssmotor/ /usr/share/nginx/html
