@@ -1,0 +1,123 @@
+<br>
+
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-12">
+
+      <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="text-center">
+            <img class="w-100" [src]="image">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-12">
+
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">提供最貼心和最溫暖的專業汽車維修服務。</h1>
+          <p class="lead text-right">創辦人 <cite title="Nelson Choi">Nelson Choi</cite></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4">
+      <h3>服務種類</h3>
+
+      <ul>
+        <li>代出新車</li>
+        <li>特平驗車</li>
+        <li>第三者追討</li>
+        <li>高價收車</li>
+        <li>汽車維修</li>
+        <li>音響防盜</li>
+        <li>特平保險</li>
+        <li>代客報價</li>
+      </ul>
+    </div>
+
+    <div class="col-md-8">
+      <h3>聯絡我們</h3>
+
+      <div class="row">
+
+        <div class="col-md-6">
+
+          <h4>營業時間</h4>
+          <p>星期一至六 上午十時半 至 晚上七時半<br>（公眾假期照常營業）</p>
+
+          <h4>地址</h4>
+          <p>
+            <button type="button" class="btn btn-primary btn-xs btn-maps" (click)="open(modal)">
+              九龍土瓜灣落山道 41 號瑞英工業大廈地下
+            </button>
+          </p>
+
+        </div>
+
+        <div class="col-md-6">
+          <h4>Tel</h4>
+          <p><a href="tel: 2411 1991">2411 1991</a></p>
+
+          <h4>Fax</h4>
+          <p>2411 1992</p>
+
+          <h4>Email</h4>
+          <p><a href="mailto:sunsideco@yahoo.com.hk">sunsideco@yahoo.com.hk</a></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<ng-template #modal let-d="dismiss">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">九龍土瓜灣落山道 41 號瑞英工業大廈地下</h5>
+
+      <button type="button" class="close" aria-label="Close" (click)="d()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.0093008933063!2d114.190898!3d22.315487999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400d80d76a2af%3A0x25901b2ec43e53db!2z5aSq6Zm95rG96LuK5pyN5YuZ5YWs5Y-4!5e0!3m2!1szh-TW!2shk!4v1423319377408"
+                width="500" height="500"></iframe>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="d()">Close</button>
+    </div>
+  </div>
+
+</ng-template>
